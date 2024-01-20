@@ -20,7 +20,7 @@ pipeline {
       stage('Preparation') {
          steps {
             cleanWs()
-             git credentialsId: 'Myajenkins', url: "https://github.com/somkuwardinesh/ui"
+             git credentialsId: 'Myajenkins', url: "https://github.com/somkuwardinesh/backend"
 		  sh 'ls -l'
 		  sh 'cat Dockerfile'
 		sh 'echo ${WORKSPACE}'
