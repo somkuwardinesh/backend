@@ -6,7 +6,7 @@ RUN mkdir 'myfiles'
 
 COPY . /my-app
 
-RUN mvn clean package
+RUN mvn clean install
 
 
 FROM openjdk:17 AS copy_build
