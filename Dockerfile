@@ -4,6 +4,8 @@ WORKDIR '/my-app'
 
 RUN mkdir 'myfiles'
 
+COPY . /my-app
+
 RUN mvn clean package
 
 
