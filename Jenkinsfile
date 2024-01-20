@@ -49,7 +49,7 @@ pipeline {
 
        stage('Deploy to GKE') {
             steps{
-                sh "sed -i 's/ui:latest/ui:${env.BUILD_ID}/g' backend.yaml"
+                sh "sed -i 's/ui:latest/backend:${env.BUILD_ID}/g' backend.yaml"
                 step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'backend.yaml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
             }
         }
