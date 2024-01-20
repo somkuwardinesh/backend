@@ -21,8 +21,8 @@ spec:
       volumes:
         - name: mongo-persistent-storage
           # pointer to the configuration of HOW we want the mount to be implemented
-          persistentVolumeClaim:
-            claimName: mongo-pvc
+          # persistentVolumeClaim:
+          #   claimName: mongo-pvc
 
 ---
 apiVersion: v1
@@ -39,32 +39,3 @@ spec:
       port: 8080
 
   type: ClusterIP
-
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: mongo-pvc
-spec:
-  storageClassName: mylocalstorage
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 20Gi
-
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: local-storage
-spec:
-  storageClassName: mylocalstorage
-  capacity:
-    storage: 20Gi
-  accessModes:
-    - ReadWriteOnce
-  hostPath:
-    path: "/mnt/some new/directory/structure/"
-    type: DirectoryOrCreate
-
