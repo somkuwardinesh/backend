@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: dineshdocker3246/backend:v1
+        image: dineshdocker3246/backend:latest
 
 ---
 apiVersion: v1
