@@ -11,11 +11,11 @@ RUN mvn clean package
 
 FROM openjdk:17 AS copy_build
 
-WORKDIR '/my-app'
+#WORKDIR '/my-app'
 
-ARG JAR_FILE=target/*.jar
+ARG JAR_FILE=/my-app/target/*.jar
 
-COPY --from=build-app  ${JAR_FILE} app.jar
+COPY --from=build-app  ${JAR_FILE}  app.jar
 
 EXPOSE 8080
 
