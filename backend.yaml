@@ -40,8 +40,7 @@ spec:
 
   type: ClusterIP
 
-  ---
-  # What do want?
+---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -53,8 +52,8 @@ spec:
   resources:
     requests:
       storage: 20Gi
+
 ---
-# How do we want it implemented
 apiVersion: v1
 kind: PersistentVolume
 metadata:
