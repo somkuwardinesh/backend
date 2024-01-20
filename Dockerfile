@@ -11,7 +11,6 @@ RUN mvn clean package
 
 FROM openjdk:17 AS copy_build
 
-#WORKDIR '/my-app'
 
 ARG JAR_FILE=/my-app/target/*.jar
 
