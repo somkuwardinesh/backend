@@ -2,6 +2,8 @@ FROM openjdk:17
 
 WORKDIR '/my-app'
 
+RUN mvn clean package
+
 RUN mkdir 'myfiles'
 
 ARG JAR_FILE=target/*.jar
