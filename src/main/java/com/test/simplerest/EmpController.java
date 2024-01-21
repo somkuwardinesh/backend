@@ -23,7 +23,7 @@ import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/emp")
-@CrossOrigin(origins = "http://34.66.113.116/")
+@CrossOrigin(origins = "*")
 @Log4j2
 public class EmpController {
 
