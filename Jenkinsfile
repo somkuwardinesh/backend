@@ -11,7 +11,7 @@ pipeline {
      REPOSITORY_TAG="${YOUR_DOCKERHUB_USERNAME}/${SERVICE_NAME}:${BUILD_ID}"
      
         PROJECT_ID = 'ace-cycling-405314'
-        CLUSTER_NAME = 'cluster-17'
+        CLUSTER_NAME = 'cluster-20'
         LOCATION = 'us-central1-c'
         CREDENTIALS_ID = 'mu-kube'
    }
