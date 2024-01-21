@@ -11,6 +11,7 @@ public class DevCorsConfiguration implements WebMvcConfigurer {
  
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/emp/**").allowedOrigins("*").allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS");
+        // registry.addMapping("/emp/**").allowedOrigins("*").allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS");
+     registry.addMapping("/**") .allowedOrigins("*") .allowedHeaders("*") .allowedMethods("*");
     }
 }
